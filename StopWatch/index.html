@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Include the CSS file for styling -->
+    <link rel="stylesheet" type="text/css" href="Assets/CSS/style.css" />
+    <title>StopWatch</title>
+  </head>
+  <body>
+    <!-- Container for the stopwatch -->
+    <div class="StopWatchContainer">
+      <!-- Heading for the stopwatch with an image -->
+      <div class="stopwatchheading">
+        <p>
+          Stop Watch
+          <!-- Image for the heading -->
+          <img
+            src="Assets/Resources/arrow-pointing-down-button-down.png"
+            alt="arrow" />
+        </p>
+      </div>
+      <!-- Display for the countdown timer -->
+      <div class="countdown" id="countdown">00:00:00</div>
+      <!-- Action buttons for the stopwatch -->
+      <div class="actionbutton">
+        <a href="#" class="pausebutton" id="pausebutton"
+          ><img src="Assets/Resources/pause-button.png" alt="pausebutton"
+        /></a>
+        <a href="#" class="startbutton" id="startbutton"
+          ><img src="Assets/Resources/play-button.png" alt="playbutton"
+        /></a>
+        <a href="#" class="resetbutton" id="resetbutton"
+          ><img src="Assets/Resources/reset-button.png" alt="resetButton"
+        /></a>
+      </div>
+    </div>
+
+    <!-- Include the JavaScript file for functionality -->
+    <script src="Assets/JS/script.js"></script>
+  </body>
+</html>
