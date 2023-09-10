@@ -1,0 +1,389 @@
+/* Import the Google Fonts stylesheet for 'Poppins' */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap');
+
+/* Apply CSS reset styles to all elements */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+    padding: 45px 25px;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 67px;
+    background: #FFEDEB;
+}
+
+
+.nav {
+    width: 95vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.searchcontainer {
+    width: 346px;
+    height: 46px;
+    border-radius: 30px;
+    background: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+
+#user-inp {
+    width: 346px;
+    height: 46px;
+    color: #EF740B;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.searchcontainer img {
+    height: 15px;
+    width: 15px;
+    flex-shrink: 0;
+}
+
+
+.favButton {
+    width: 100px;
+    height: 45px;
+    text-align: center;
+    border-radius: 30px;
+    /* border: none; */
+    background: #EF740B;
+    cursor: pointer;
+
+}
+
+.favButton span {
+    color: white;
+}
+
+
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.mealContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.mealContainer img {
+    position: relative;
+    left: 120px;
+    border-radius: 50%;
+    width: 380px;
+    height: 380px;
+    border: 10px solid rgba(0, 0, 0, 0.2);
+}
+
+.mealDescription {
+    background: whitesmoke;
+    width: 75vw;
+    height: 90%;
+    padding: 3em;
+    padding-right: 10em;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: column;
+
+}
+
+.FoodName {
+    color: #000;
+    text-align: right;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+.ingredientsContainer {
+    flex-shrink: 0;
+    position: relative;
+
+}
+
+.footer {
+    display: flex;
+    gap: 138px;
+}
+
+.addToFavButton {
+    width: 213px;
+    height: 44px;
+    flex-shrink: 0;
+    background-color: #EF740B;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.recipeButton {
+    width: 116px;
+    height: 44px;
+    flex-shrink: 0;
+    background-color: #EF740B;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+
+
+#recipe {
+    position: absolute;
+    background-color: #FFF;
+    min-height: 10%;
+    width: 800px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    border-radius: 0.6em;
+    overflow-y: auto;
+    display: none;
+
+}
+
+
+#recipe pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    padding: 2.5em 1.2em 1.2em 1.2em;
+    line-height: 2em;
+}
+
+#hide-recipe {
+    font-size: 1em;
+    position: relative;
+    width: 1.8em;
+    height: 1.8em;
+    background-color: #EF740B;
+    border: none;
+    top: 1.2em;
+    left: 90%;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+
+ul {
+    font-size: 1em;
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0.9em 1.1em;
+    padding: 1.2em 0 0 1.2em;
+}
+
+#favoritesContent {
+    background-color: rgba(255, 255, 255, 1);
+    width: 100vw;
+    height: 90vh;
+    position: absolute;
+    top: 2em;
+}
+
+.favoriteRecipe {
+    display: flex;
+    gap: 1em;
+    padding: 20px;
+
+}
+
+.favoriteRecipe img {
+    width: 100px;
+    height: 100px;
+}
+
+@media screen and (max-width: 768px) {
+
+
+    body {
+        padding: 0px;
+        overflow-y: auto;
+    }
+
+    .nav {
+        width: 95vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .favButton {
+        display: none;
+    }
+
+
+    .main {
+        display: flex;
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .mealContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        top: -40px;
+
+    }
+
+    .mealDescription {
+        height: 800px;
+
+    }
+
+    .mealContainer img {
+        position: relative;
+        left: -5px;
+        width: 300px;
+        height: 300px;
+        flex-shrink: 0;
+        border-radius: 50%;
+
+    }
+
+    .mealDescription {
+        background: whitesmoke;
+        width: 100%;
+        height: 800px;
+        flex-shrink: 0;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        top: -80px;
+        z-index: -1;
+
+    }
+
+    .FoodName {
+        color: #000;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        position: absolute;
+        left: 4em;
+        top: 2.2em;
+
+    }
+
+
+    .ingredientsContainer {
+        position: absolute;
+        top: 10em;
+        left: 2.2em;
+        flex-shrink: 0;
+    }
+
+
+    .addToFavButton {
+        width: 127px;
+        height: 44px;
+        flex-shrink: 0;
+        background-color: #EF740B;
+        border-radius: 30px;
+        cursor: pointer;
+    }
+
+    .recipeButton {
+        width: 116px;
+        height: 44px;
+        flex-shrink: 0;
+        background-color: #EF740B;
+        border-radius: 30px;
+        cursor: pointer;
+    }
+
+
+    .footer {
+        position: absolute;
+        top: 35em;
+        left: 2.8em;
+        padding-bottom: 0px;
+    }
+
+
+    #recipe {
+        position: absolute;
+        background-color: #FFF;
+        min-height: 10%;
+        width: 800px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        border-radius: 0.6em;
+        overflow-y: auto;
+        display: none;
+
+    }
+
+
+    #recipe pre {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        padding: 2.5em 1.2em 1.2em 1.2em;
+        line-height: 2em;
+    }
+
+    #hide-recipe {
+        font-size: 1em;
+        position: relative;
+        width: 1.8em;
+        height: 1.8em;
+        background-color: #EF740B;
+        border: none;
+        top: 1.2em;
+        left: 90%;
+        border-radius: 0.3em;
+        cursor: pointer;
+    }
+
+    ul {
+        font-size: 1em;
+        position: relative;
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 0.9em 1.1em;
+        padding: 1.2em 0 0 1.2em;
+    }
+
+
+}
